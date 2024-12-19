@@ -33,7 +33,7 @@ Run the script with the desired command and arguments. Use `--help` to see the a
 Perform cleanup operations on a GitHub repository.
 
 ```bash
-python3 script.py cleanup --org <organization> --repo <repository> --type <type> --time-frame-gt <timeframe> --limit <number> --token <token>
+python3 main.py cleanup --org <organization> --repo <repository> --type <type> --time-frame-gt <timeframe> --limit <number> --token <token>
 ```
 
 **Arguments:**
@@ -47,22 +47,22 @@ python3 script.py cleanup --org <organization> --repo <repository> --type <type>
 **Examples:**
 - Delete releases older than 30 days:
   ```bash
-  python3 script.py cleanup --org my-org --repo my-repo --type releases --time-frame-gt 30d --token my-token
+  python3 main.py cleanup --org my-org --repo my-repo --type releases --time-frame-gt 30d --token my-token
   ```
 - Delete all tags:
   ```bash
-  python3 script.py cleanup --org my-org --repo my-repo --type tags --token my-token
+  python3 main.py cleanup --org my-org --repo my-repo --type tags --token my-token
   ```
 - Close open issues with a limit of 50:
   ```bash
-  python3 script.py cleanup --org my-org --repo my-repo --type issues --limit 50 --token my-token
+  python3 main.py cleanup --org my-org --repo my-repo --type issues --limit 50 --token my-token
   ```
 
 #### Change
 Modify repository settings like visibility and name.
 
 ```bash
-python3 script.py change --org <organization> [--repo <repository>] [--all-repos] [--visibility <visibility>] [--change-name <new_name>] --token <token>
+python3 main.py change --org <organization> [--repo <repository>] [--all-repos] [--visibility <visibility>] [--change-name <new_name>] --token <token>
 ```
 
 **Arguments:**
@@ -76,15 +76,15 @@ python3 script.py change --org <organization> [--repo <repository>] [--all-repos
 **Examples:**
 - Change visibility of a repository to private:
   ```bash
-  python3 script.py change --org my-org --repo my-repo --visibility private --token my-token
+  python3 main.py change --org my-org --repo my-repo --visibility private --token my-token
   ```
 - Rename a repository:
   ```bash
-  python3 script.py change --org my-org --repo old-repo-name --change-name new-repo-name --token my-token
+  python3 main.py change --org my-org --repo old-repo-name --change-name new-repo-name --token my-token
   ```
 - Change visibility of all repositories in an organization to public:
   ```bash
-  python3 script.py change --org my-org --all-repos --visibility public --token my-token
+  python3 main.py change --org my-org --all-repos --visibility public --token my-token
   ```
 
 ## Notes
